@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Slab:wght@300&display=swap');
 .navbar {
     background-color: #112240;
     display: flex;
@@ -10,20 +9,44 @@
     height: 60px;
     position: fixed;
     width: 100%;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #logo {
     color: #CC5500;
 }
 
-.navbar a {
-    display: inline-block;
+.wrapper {
+    width: 100%;
     margin: 15px 20px;
+}
+
+.link {
+    position: relative;
+    width:100%;
+    display: block;
+    text-align: center;
     transition: color 0.4s ease;
 }
 
-.navbar a:hover {
+.link:hover {
     cursor: pointer;
-    color: #CC5500;  
+    color: #CC5500;
+
 }
+
+.link::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    top: 0%;
+    bottom: 0%;
+    background-color: #CC5500;
+    transition: width 0.2s ease-in;
+  }
+
+  .link:hover::before,
+  .link:focus::before {
+      width: 100%;
+  }

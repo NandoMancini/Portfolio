@@ -6,9 +6,9 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div id="logo"><strong>Fernando S.</strong></div>
-            <a>About Me</a>
-            <a>Projects</a>
-            <a>Contact</a>
+            <div className="weapper"><a className="link">About Me</a></div>
+            <div className="weapper"><a className="link">Projects</a></div>
+            <div className="weapper"><a className="link">Contact</a></div>
         </div>
     )
 }
