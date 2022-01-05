@@ -16,11 +16,6 @@
     color: #CC5500;
 }
 
-.wrapper {
-    width: 100%;
-    margin: 15px 20px;
-}
-
 .link {
     position: relative;
     width:100%;
@@ -46,7 +41,7 @@
     transition: width 0.2s ease-in;
   }
 
-  .link:hover::before,
-  .link:focus::before {
+.link:hover::before,
+.link:focus::before {
       width: 100%;
-  }
+}
