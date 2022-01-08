@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Slab:wght@300&display=swap');
+
+
+
 .navbar {
     background-color: #112240;
     display: flex;
@@ -13,7 +16,8 @@
 }
 
 #logo {
-    color: #CC5500;
+    color: var(--prime);
+    font-size: 1.5rem;
 }
 
 .link {
@@ -26,7 +30,7 @@
 
 .link:hover {
     cursor: pointer;
-    color: #CC5500;
+    color: var(--prime);
 
 }
 
@@ -37,7 +41,7 @@
     height: 2px;
     top: 0%;
     bottom: 0%;
-    background-color: #CC5500;
+    background-color: var(--prime);
     transition: width 0.2s ease-in;
   }
 
