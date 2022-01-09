@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Slab:wght@300&display=swap');
-
-
+:root {
+    --prime: #CC5500;
+  }
 
 .navbar {
     background-color: #112240;
@@ -18,34 +18,37 @@
 #logo {
     color: var(--prime);
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
-.link {
+#link {
     position: relative;
     width:100%;
     display: block;
     text-align: center;
-    transition: color 0.4s ease;
+    transition: color 0.4s ease;;
 }
 
-.link:hover {
+#link:hover {
     cursor: pointer;
     color: var(--prime);
-
+    display: flex;
+    align-items: center;
 }
 
-.link::before {
+
+
+#link::before {
     content: "";
     position: absolute;
     width: 0%;
     height: 2px;
     top: 0%;
-    bottom: 0%;
     background-color: var(--prime);
     transition: width 0.2s ease-in;
   }
 
-.link:hover::before,
-.link:focus::before {
+#link:hover::before,
+#link:focus::before {
       width: 100%;
 }
