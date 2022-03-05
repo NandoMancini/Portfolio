@@ -11,6 +11,8 @@
 .wrapper {
     color: white;
     font-size: 30px;
+    position: fixed;
+    z-index: -1;
 }
 
 button {
@@ -23,23 +25,23 @@ button {
     transition: background-color 0.5s;
 }
 
-span {
-    color: var(--prime);
-}
-
 button:hover {
     background-color: var(--prime);
     cursor: pointer;
 }
 
+span {
+    color: var(--prime);
+}
+
 img {
     height: 40px;
-
 }
 
 .arrow {
-    position: absolute; 
+    position: fixed;
     bottom: 0;
+    z-index: -1;
     animation: arrow-blink 2s infinite;
 }
 
