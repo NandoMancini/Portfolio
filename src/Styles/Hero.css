@@ -1,8 +1,9 @@
-.body {
+.landing {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     font-size: 1.5rem;
     position: block;
 }
@@ -31,6 +32,17 @@ button:hover {
     cursor: pointer;
 }
 
+img {
+    height: 40px;
+
+}
+
+.arrow {
+    position: absolute; 
+    bottom: 0;
+    animation: arrow-blink 2s infinite;
+}
+
 .ityped-cursor {
     font-size: 2.2rem;
     opacity: 1;
@@ -41,6 +53,20 @@ button:hover {
 }
  
 @keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes arrow-blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
     100% {
         opacity: 0;
     }
