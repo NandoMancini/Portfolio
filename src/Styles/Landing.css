@@ -5,19 +5,17 @@
     justify-content: center;
     flex-direction: column;
     font-size: 1.5rem;
-    position: block;
+    position: relative;
 }
 
 .wrapper {
-    color: white;
+    color: seashell;
     font-size: 30px;
-    position: fixed;
-    z-index: -1;
 }
 
-button {
+.contact {
     background-color: transparent;
-    color: white;
+    color: seashell;
     border-color: var(--prime);
     padding: 10px 20px;
     border-radius: 5px;
@@ -25,24 +23,16 @@ button {
     transition: background-color 0.5s;
 }
 
-button:hover {
+.contact:hover {
     background-color: var(--prime);
     cursor: pointer;
 }
 
-span {
-    color: var(--prime);
-}
-
-img {
-    height: 40px;
-}
-
 .arrow {
-    position: fixed;
-    bottom: 0;
-    z-index: -1;
+    position: absolute;
+    height: 40px;
     animation: arrow-blink 2s infinite;
+    bottom: 0;
 }
 
 .ityped-cursor {
