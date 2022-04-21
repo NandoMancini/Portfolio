@@ -4,4 +4,126 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+    position: relative;
+    height: 90vh;
+}
+
+.proj-arrow-left {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    height: 150px;
+}
+
+.proj-arrow-left:hover {
+    cursor: pointer;
+}
+
+
+.proj-arrow-right {
+    position: absolute;
+    height: 50px;
+    right: 100px;
+    top: 50%;
+    height: 150px;
+}
+
+.proj-arrow-right:hover {
+    cursor: pointer;
+}
+
+
+.projects h1 {
+    text-align: left;
+    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.slider {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    width: 60%;
+    height: 80%;
+    background-color: #071121;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out
+}
+
+.item .left {
+    flex: 4;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+.project-icons img {
+    height: 70px;
+}
+
+.project-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item .right {
+    flex: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right img {
+    width: 85%;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.right img:hover {
+    width: 90%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+    .item {
+        width: 50%;
+        height: 100%;
+        background-color: #071121;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        flex-direction: column-reverse;
+        transition: opacity 0.2s ease-in-out;
+    }
+    .item .left {
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .item .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

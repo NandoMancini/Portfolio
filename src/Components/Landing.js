@@ -21,7 +21,7 @@ const Hero = () => {
     return (
         <div className="landing">
             <div className="wrapper">
-                <h2>Hi, I'm</h2>
+                <h2>Hi! I'm</h2>
                 <h1>Fernando Sousa,</h1>
                 <h3>and I enjoy <span ref={textRef}></span></h3>
                 <button class="contact">Contact Me!</button>
