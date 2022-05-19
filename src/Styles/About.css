@@ -16,6 +16,10 @@
     margin-bottom: 100px;
 }
 
+.about-container {
+    border: 1px solid white;
+}
+
 .about h1 {
     text-align: left;
     font-size: 40px;
@@ -46,9 +50,20 @@
     transition: all 0.3s ease-in-out;
 }
 
-.a-image :hover {
-    width: 21em;
+.proj-icons {
+    display: flex;
+    flex-direction: row;
 }
+
+.proj-icon {
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+
+
+
+
 
 
 

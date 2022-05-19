@@ -40,20 +40,21 @@ function Projects() {
                                 <h2>{obj.title}</h2>
                                 <p>{obj.subTitle}</p>
                                 <div className="project-icons">
-                                    <img src={react}></img>
-                                    <img src={js}></img>
+                                    <img src={react} alt={"react icon"}></img>
+                                    <img src={js} alt={"js icon"}></img>
                                 </div>
                             </div>
                             <div className="right">
-                                <img src={require("../Assets/" + obj.image + ".png")}></img>
+                                {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
+                                <img src={require("../Assets/" + obj.image + ".png")} alt={"Project picture"}></img>
                             </div>
                         </div>
                     </div>
                    )
                })}
             </div>
-            <img src={leftArrow} className="proj-arrow-left" onClick={prevSlide}></img>
-            <img src={rightArrow} className="proj-arrow-right" onClick={nextSlide}></img>
+            <img src={leftArrow} className="proj-arrow-left" onClick={prevSlide} alt={"leftArrow"}></img>
+            <img src={rightArrow} className="proj-arrow-right" onClick={nextSlide} alt={"rightArrow"}></img>
         </div>
     )
 }
