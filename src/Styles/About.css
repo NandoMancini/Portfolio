@@ -58,9 +58,13 @@
 .proj-icon {
     font-size: 3rem;
     margin: 1rem;
+    transition-duration: 0.2s;
 }
 
-
+.fa-inverse:hover {
+    color: #CC5500;
+    cursor: pointer;
+}
 
 
 

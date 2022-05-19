@@ -19,9 +19,9 @@ const About = () => {
                     nec, pellentesque eu, pretium <span>quis</span>, sem. Nulla consequat massa quis enim.</p>
                     <button class="contact">Résumé</button>
                     <div className="proj-icons">
-                        <FontAwesomeIcon icon={faDev} className={"proj-icon"} />
-                        <FontAwesomeIcon icon={faGithub} className={"proj-icon"} />
-                        <FontAwesomeIcon icon={faLinkedin} className={"proj-icon"} />
+                        <FontAwesomeIcon icon={faDev} className={"proj-icon"} inverse />
+                        <FontAwesomeIcon icon={faGithub} className={"proj-icon"} inverse />
+                        <FontAwesomeIcon icon={faLinkedin} className={"proj-icon"} inverse />
                     </div>
                 </div>
             </div>
