@@ -10,13 +10,12 @@ const dataSlider = [
     },
     {
       id: uuidv4(),
-      title: "Discord Bot",
+      title: "WeathAvi",
       subTitle: "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at elementum arcu, nec porttitor risus. Ut porttitor  a nec dui. Cras luctus elit eget lectus luctus, in consequat mauris condimentum. Vivamus scelerisque quam sed eros viverra, at tempus dui condimentum. Mauris at rhoncus sapien. Vivamus at",
       image: "bot",
-      languages: ["python"],
       devpost: "https://devpost.com/software/weather-bot-y956fc",
       github: "https://github.com/NandoMancini/PyJaC",
-      youtube: "https://youtu.be/RwVAqgZecL0"
+      youtube: "https://youtu.be/RwVAqgZecL0",
     },
     {
       id: uuidv4(),
@@ -27,7 +26,7 @@ const dataSlider = [
     },
     {
       id: uuidv4(),
-      title: "Musketeer",
+      title: "Three Musketeers",
       subTitle: "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at elementum arcu, nec porttitor risus. Ut porttitor  a nec dui. Cras luctus elit eget lectus luctus, in consequat mauris condimentum. Vivamus scelerisque quam sed eros viverra, at tempus dui condimentum. Mauris at rhoncus sapien. Vivamus at",
       image: "musketeer",
     },

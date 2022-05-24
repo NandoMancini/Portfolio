@@ -10,10 +10,10 @@
 
 .wrapper {
     color: seashell;
-    font-size: 30px;
+    font-size: 1.2em;
 }
 
-.contact {
+.contact-button {
     background-color: transparent;
     color: seashell;
     border-color: var(--prime);
@@ -23,14 +23,14 @@
     transition: background-color 0.5s;
 }
 
-.contact:hover {
+.contact-button:hover {
     background-color: var(--prime);
     cursor: pointer;
 }
 
 .arrow {
     position: absolute;
-    height: 40px;
+    font-size: 3rem;
     animation: arrow-blink 2s infinite;
     bottom: 0;
 }

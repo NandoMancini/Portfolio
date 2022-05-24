@@ -3,8 +3,8 @@ import "../Styles/Projects.css"
 import dataSlider from "./dataSlider"
 import leftArrow from "../Assets/leftArrow.png"
 import rightArrow from "../Assets/rightArrow.png"
-import react from "../Assets/react.png"
-import js from "../Assets/js.png"
+import {faYoutube, faGithub, faDev} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Projects() {
     const [slideIndex, setSlideIndex] = useState(0)
@@ -39,9 +39,16 @@ function Projects() {
                             <div className="left">
                                 <h2>{obj.title}</h2>
                                 <p>{obj.subTitle}</p>
-                                <div className="project-icons">
-                                    <img src={react} alt={"react icon"}></img>
-                                    <img src={js} alt={"js icon"}></img>
+                                <div className="stack-icons">
+                                    <a href={obj.devpost}>
+                                        <FontAwesomeIcon icon={faDev} className={"stack-icon"} style={obj.devpost ? {display:  "block"} : {display: "none"}} inverse />
+                                    </a>
+                                    <a href={obj.youtube}>
+                                        <FontAwesomeIcon icon={faYoutube} className={"stack-icon"} style={obj.youtube ? {display:  "block"} : {display: "none"}} inverse />
+                                    </a>
+                                    <a href={obj.github}>
+                                        <FontAwesomeIcon icon={faGithub} className={"stack-icon"} style={obj.github ? {display:  "block"} : {display: "none"}} inverse />
+                                    </a>
                                 </div>
                             </div>
                             <div className="right">

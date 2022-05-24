@@ -2,7 +2,9 @@ import React from 'react'
 import "../Styles/Landing.css"
 import { init } from "ityped"
 import { useEffect, useRef } from "react"
-import arrow from "../Assets/arrow.png"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faChevronDown} from '@fortawesome/free-solid-svg-icons';
+
 
 const Hero = () => {
 
@@ -24,9 +26,9 @@ const Hero = () => {
                 <h2>Hi! I'm</h2>
                 <h1>Fernando Sousa,</h1>
                 <h3>and I enjoy <span ref={textRef}></span></h3>
-                <button class="contact">Contact Me!</button>
+                <button className={"contact-button"}>Contact Me!</button>
             </div>
-            <img className="arrow" src={arrow}/>
+            <FontAwesomeIcon icon={faChevronDown} className={"arrow"}/>
         </div>
     )
 }
