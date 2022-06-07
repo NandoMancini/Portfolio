@@ -4,7 +4,7 @@ import { init } from "ityped"
 import { useEffect, useRef } from "react"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronDown} from '@fortawesome/free-solid-svg-icons';
-
+import {Link} from 'react-scroll'
 
 const Hero = () => {
 
@@ -26,7 +26,7 @@ const Hero = () => {
                 <h2>Hi! I'm</h2>
                 <h1>Fernando Sousa,</h1>
                 <h3>and I enjoy <span ref={textRef}></span></h3>
-                <button className={"contact-button"}>Contact Me!</button>
+                <Link to={"contact"} smooth={true} duration={1000} ><button className={"contact-button"}>Contact Me!</button></Link>
             </div>
             <FontAwesomeIcon icon={faChevronDown} className={"arrow"}/>
         </div>

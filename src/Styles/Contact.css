@@ -44,6 +44,7 @@ input, form textarea {
     background: #0b1c36;
     font-size: 16px;
     color: #fff;
+    resize: none;
 }
 
 form button {
