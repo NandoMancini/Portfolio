@@ -22,8 +22,9 @@
 }
 
 .content img {
-    height: 18em;
+    height: 20em;
     margin: 30px;
+    border-radius: 10px;
 }
 
 .container{
@@ -36,7 +37,7 @@
 
 .proj-icons {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .proj-icon {
@@ -60,6 +61,10 @@
 
     .container {
         width: 80%;
+    }
+
+    .proj-icons {
+        flex-direction: row;
     }
 }
 

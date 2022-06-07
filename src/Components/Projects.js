@@ -29,7 +29,7 @@ function Projects() {
     }
 
     return (
-        <div className="projects">
+        <div className="projects" data-aos="fade-down">
             <h1>Projects</h1>
             <div className="slider" style={{transform: `translateX(-${slideIndex * 100}vw)`}}>
                {dataSlider.map((obj, index) => {
