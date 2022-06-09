@@ -55,6 +55,10 @@
     cursor: pointer;
 }
 
+#resume-button {
+    display: none;
+}
+
 @media screen and (max-width: 767px) {
     .about {
         height: auto;
