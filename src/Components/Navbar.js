@@ -10,9 +10,11 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div id="logo" onClick={scrollToTop}><strong>Fernando S.</strong></div>
-            <Link to={"about"} smooth={true} duration={1000} ><a id="link">About Me</a></Link>
-            <Link to={"projects"} smooth={true} duration={1000} ><a id="link">Projects</a></Link>
-            <Link to={"contact"} smooth={true} duration={1000} ><a id="link">Contact</a></Link>
+            <div className={"links"}>
+                <Link to={"about"} smooth={true} duration={1000} className={"link-wrapper"}><a id="link">About Me</a></Link>
+                <Link to={"projects"} smooth={true} duration={1000} className={"link-wrapper"}><a id="link">Projects</a></Link>
+                <Link to={"contact"} smooth={true} duration={1000} className={"link-wrapper"}><a id="link">Contact</a></Link>
+            </div>
         </div>
     )
 }

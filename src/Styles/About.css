@@ -27,6 +27,10 @@
     border-radius: 10px;
 }
 
+.content p {
+    text-align: justify;
+}
+
 .container{
     width: 40%;
     font-size: 20px;

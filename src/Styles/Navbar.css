@@ -5,7 +5,7 @@
 .navbar {
     background-image: linear-gradient(to right, #112240 , #17366b);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
     color: seashell;
@@ -16,10 +16,21 @@
     z-index: 2;
 }
 
+.links {
+    display: flex;
+    flex-direction: row;
+    margin-right: 50px;
+}
+
+.link-wrapper {
+    margin: 0 10px;
+}
+
 #logo {
     color: var(--prime);
     font-size: 1.5rem;
     cursor: pointer;
+    margin-left: 60px;
 }
 
 #link {
@@ -27,7 +38,7 @@
     width:100%;
     display: block;
     text-align: center;
-    transition: color 0.4s ease;;
+    transition: color 0.4s ease;
 }
 
 #link:hover {
@@ -40,9 +51,9 @@
 #link::before {
     content: "";
     position: absolute;
-    width: 0%;
+    width: 0;
     height: 2px;
-    top: 0%;
+    top: 0;
     background-color: var(--prime);
     transition: width 0.2s ease-in;
   }
@@ -50,4 +61,14 @@
 #link:hover::before,
 #link:focus::before {
       width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    #logo {
+        margin-left: 10px;
+    }
+
+    .links {
+        display: none;
+    }
 }

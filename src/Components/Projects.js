@@ -5,6 +5,7 @@ import leftArrow from "../Assets/leftArrow.png"
 import rightArrow from "../Assets/rightArrow.png"
 import {faYoutube, faGithub, faDev} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import parse from "html-react-parser";
 
 function Projects() {
     const [slideIndex, setSlideIndex] = useState(0)
@@ -38,7 +39,7 @@ function Projects() {
                         <div  className='item'>
                             <div className="left">
                                 <h2>{obj.title}</h2>
-                                <p>{obj.subTitle}</p>
+                                <p>{parse(obj.subTitle)}</p>
                                 <div className="stack-icons">
                                     <a href={obj.devpost}>
                                         <FontAwesomeIcon icon={faDev} className={"stack-icon"} style={obj.devpost ? {display:  "block"} : {display: "none"}} inverse />

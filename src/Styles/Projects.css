@@ -35,6 +35,7 @@
     text-align: left;
     font-size: 2.5rem;
     font-family: 'Open Sans', sans-serif;
+    margin-top: 50px;
 }
 
 .slider {
@@ -60,7 +61,6 @@
     border-radius: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
     padding: 10px;
 } 
 
@@ -75,6 +75,11 @@
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+    padding-left: 15px;
+}
+
+.left h2 {
+    text-align: center;
 }
 
 .stack-icons {

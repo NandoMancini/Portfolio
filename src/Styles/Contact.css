@@ -19,7 +19,7 @@ form {
     width: 90%;
     max-width: 600px;
     border-radius: 10px;
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 .email-icon {
@@ -58,4 +58,13 @@ form button {
     width: 150px;
     margin: 20px auto 0;
     border-radius: 30px;
+}
+
+form h3 {
+    font-weight: 500;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{
+  font-family: 'myFont', Arial, Helvetica, sans-serif;
 }
