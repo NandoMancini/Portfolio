@@ -14,7 +14,7 @@ const dataSlider = [
     {
       id: uuidv4(),
       title: "WeathAvi",
-      subTitle: `WeathAvi was project created for the <span>Pyjac hackathon</span>, and is a <span>Discord bot</span> 
+      subTitle: `WeathAvi was a project created for the <span>Pyjac hackathon</span>, and is a <span>Discord bot</span> 
             that sends you the current weather forecast, along with appropriate suggestions. As one of our members is 
             a pilot, WeathAvi also displays weather data meant for aviators planning flight paths, besides also recording 
             all data and commands it receives by uploading it to Google Drive using <span>Google's API</span>.`,
