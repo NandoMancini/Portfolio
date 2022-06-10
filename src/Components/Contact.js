@@ -10,6 +10,7 @@ const Contact = () => {
 
     emailjs.sendForm('service_7g0nj9f', 'template_cjlfu6k', form.current, 'Cgf26PWLfsl53jLAT')
       .then((result) => {
+          alert("Email sent successfully!")
           console.log(result.text);
       }, (error) => {
           console.log(error.text);
