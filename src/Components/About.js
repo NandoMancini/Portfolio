@@ -11,7 +11,7 @@ const About = () => {
             <div className="content">
                 <img className={"self"} src={self} alt={"self portrait"}></img>
                 <div className="container">
-                    <p>Hey! I'm Fernando, a <span>second year computer science student</span> at the University of
+                    <p>Hey! I'm Fernando, a <span>third year computer science student</span> at the University of
                     Toronto. I enjoy studying different parts of computer science and learning new languages/tools,
                     since that makes it possible for me to bring things that I imagine into reality.</p>
                     <p>When I'm not in class I like going to the gym, reading, but also coding and building personal
