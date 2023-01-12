@@ -13,6 +13,7 @@ const Contact = () => {
           alert("Email sent successfully!")
           console.log(result.text);
       }, (error) => {
+          alert("There has been an error. Please contact me directly at fernandomancinidesousa@gmail.com")
           console.log(error.text);
       });
   };
