@@ -1,25 +1,49 @@
 .contact {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: Center;
+    justify-content: center;
     flex-direction: column;
+    padding: 100px 2rem 80px;
 }
 
 .contact h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.contact h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
 }
 
 form {
-    background-color: #071121;
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-tertiary) 100%);
     display: flex;
     flex-direction: column;
-    padding: 2vw 4vw;
-    width: 90%;
+    padding: 2.5rem;
+    width: 100%;
     max-width: 600px;
-    border-radius: 10px;
-    margin-top: 80px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+form:hover {
+    box-shadow: 0 12px 40px rgba(204, 85, 0, 0.2);
 }
 
 .email-icon {
@@ -32,39 +56,92 @@ form {
 }
 
 #form-title {
-    font-weight: 800;
-    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+#form-header h3 {
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
 }
 
 input, form textarea {
-    border: 0;
-    margin: 10px 0;
-    padding: 20px;
+    border: 2px solid var(--border-color);
+    margin: 12px 0;
+    padding: 16px 20px;
     outline: none;
-    background: #0b1c36;
+    background: var(--bg-secondary);
     font-size: 16px;
-    color: #fff;
+    color: var(--text-primary);
     resize: none;
+    border-radius: 8px;
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+input:focus, form textarea:focus {
+    border-color: var(--primary);
+    background: rgba(17, 34, 64, 0.8);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+input::placeholder, form textarea::placeholder {
+    color: var(--text-muted);
 }
 
 form button {
-    padding: 15px;
-    background: #CC5500;
+    padding: 16px 32px;
+    background: var(--primary);
     color: white;
-    font-size: 18px;
-    border: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
     outline: none;
     cursor: pointer;
-    width: 150px;
-    margin: 20px auto 0;
-    border-radius: 30px;
+    width: auto;
+    min-width: 150px;
+    margin: 24px auto 0;
+    border-radius: 8px;
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(204, 85, 0, 0.3);
 }
 
-form h3 {
+form button:hover:not(:disabled) {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(204, 85, 0, 0.4);
+}
+
+form button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.submit-status {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
     font-weight: 500;
 }
 
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder{
-  font-family: 'myFont', Arial, Helvetica, sans-serif;
+.submit-status.success {
+    background-color: #4caf50;
+    color: white;
 }
+
+.submit-status.error {
+    background-color: #f44336;
+    color: white;
+}
+

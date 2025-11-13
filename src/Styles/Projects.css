@@ -1,41 +1,67 @@
 .projects {
-    color: seashell;
+    color: var(--text-primary);
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 100px 0 80px;
     overflow: hidden;
 }
 
-.proj-arrow-left {
+.proj-arrow-left,
+.proj-arrow-right {
     position: absolute;
-    left: 100px;
     top: 40%;
     height: 150px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.proj-arrow-left {
+    left: 100px;
 }
 
 .proj-arrow-right {
-    position: absolute;
     right: 100px;
-    top: 40%;
-    height: 150px;
 }
 
-.proj-arrow-left:hover {
-    cursor: pointer;
-}
-
+.proj-arrow-left:hover,
 .proj-arrow-right:hover {
-    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.proj-arrow-left img,
+.proj-arrow-right img {
+    height: 100%;
+    width: auto;
 }
 
 
 .projects h1 {
-    text-align: left;
-    font-size: 2.5rem;
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 70px;
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 3rem;
+    width: 100%;
+    padding: 0 5%;
+    position: relative;
+    display: inline-block;
+}
+
+.projects h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
 }
 
 .slider {
@@ -56,12 +82,20 @@
 
 .item {
     width: 50%;
-    height: 60%;
-    background-color: #071121;
-    border-radius: 20px;
+    min-height: 500px;
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-tertiary) 100%);
+    border-radius: 16px;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(204, 85, 0, 0.2);
 } 
 
 .item h2 {
@@ -93,11 +127,13 @@
     font-size: 3rem;
     margin: 1rem;
     transition: all 0.2s;
+    color: seashell;
 }
 
-.fa-inverse:hover {
+.stack-icon:hover {
     color: #CC5500;
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 .item .right {
@@ -108,52 +144,72 @@
 }
 
 .right img {
-    width: 85%;
-    margin: 10px;
-    transition: all 0.3s ease-in-out;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: var(--transition);
+    box-shadow: var(--shadow-md);
 }
 
-@media screen and (max-width: 767px) {
+.right img:hover {
+    transform: scale(1.02);
+}
+
+@media screen and (max-width: 1024px) {
+    .proj-arrow-left {
+        left: 20px;
+        height: 100px;
+    }
+
+    .proj-arrow-right {
+        right: 20px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .projects {
         overflow: visible;
-        height: auto;
+        padding: 80px 0 60px;
     }
 
-    .proj-arrow-left {
-        display: none;
-    }
-
+    .proj-arrow-left,
     .proj-arrow-right {
         display: none;
     }
 
-   .slider {
-       position: static;
-       flex-direction: column;
-       height: auto;
-   }
+    .slider {
+        position: static;
+        flex-direction: column;
+        height: auto;
+        transform: none !important;
+    }
+
     .item-container {
-        margin-bottom: 50px;
+        margin-bottom: 3rem;
+        width: 100%;
+        padding: 0 1.5rem;
     }
 
     .item {
-        width: 80%;
-        height: 100%;
+        width: 100%;
+        min-height: auto;
         flex-direction: column-reverse;
+        padding: 1.5rem;
     }
 
     .item .left {
-        height: 90%;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
-        padding: 20px;
+        width: 100%;
+        padding: 1rem 0;
     }
 
     .item .right {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .right img {
+        width: 100%;
     }
 } 
